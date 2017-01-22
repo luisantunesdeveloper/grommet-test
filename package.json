@@ -1,9 +1,35 @@
 {
-  "name": "webpack-2-starter",
-  "version": "0.0.1",
-  "description": "tired of boilerplates",
-  "main": "index.js",
-  "repository": "git@github.com:luisantunesdeveloper/webpack-2-starter.git",
-  "author": "Luís Antunes",
-  "license": "MIT"
+    "name": "webpack-2-starter",
+    "version": "0.0.1",
+    "description": "tired of boilerplates",
+    "main": "index.js",
+    "repository": "git@github.com:luisantunesdeveloper/webpack-2-starter.git",
+    "author": "Luís Antunes",
+    "license": "MIT",
+    "scripts": {
+        "build": "webpack -p --config ./tools/build/webpack.config.js --display-error-details",
+        "start": "node tools/build/webpack-dev-server"
+    },
+    "devDependencies": {
+        "autoprefixer-loader": "3.2.0",
+        "babel-core": "^6.21.0",
+        "babel-loader": "^6.2.10",
+        "babel-preset-latest": "^6.16.0",
+        "babel-preset-react": "^6.16.0",
+        "css-loader": "^0.26.1",
+        "extract-text-webpack-plugin": "2.0.0-beta.5",
+        "file-loader": "^0.9.0",
+        "grommet": "^1.2.0",
+        "html-webpack-plugin": "^2.24.1",
+        "node-sass": "^4.3.0",
+        "sass-loader": "^4.1.1",
+        "style-loader": "^0.13.1",
+        "webpack": "2.1.0-beta.25",
+        "webpack-dev-server": "2.1.0-beta.10"
+    },
+    "dependencies": {
+        "react": "^15.4.1",
+        "react-dom": "^15.4.1",
+        "react-router": "^3.0.0"
+    }
 }
