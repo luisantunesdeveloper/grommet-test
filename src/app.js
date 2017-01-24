@@ -19,6 +19,8 @@ import Heading from 'grommet/components/Heading';
 import Accordion from 'grommet/components/Accordion';
 import AccordionPanel from 'grommet/components/AccordionPanel';
 import Paragraph from 'grommet/components/Paragraph';
+import Card from 'grommet/components/Card';
+import Markdown from 'grommet/components/Markdown';
 
 
 render(
@@ -44,6 +46,17 @@ render(
           </Menu>
         </Header>
         <Section>
+          <Markdown content='
+            # H1  
+            Paragraph [link](/).   
+            ## H2  
+            ### H3
+            
+            ![image](http://2.bp.blogspot.com/-MJ3AH4luyEg/UJ-ODo_HS3I/AAAAAAAABlc/gnb5i30h4rc/s1600/funny-angry-baby-1.gif)'/>
+          <Card label='Sample Label'
+            thumbnail='http://2.bp.blogspot.com/-MJ3AH4luyEg/UJ-ODo_HS3I/AAAAAAAABlc/gnb5i30h4rc/s1600/funny-angry-baby-1.gif'
+            heading='Sample Heading'
+            description='Sample description providing more details.' />
           <Accordion>
             <AccordionPanel heading='First Title'>
               <Paragraph>

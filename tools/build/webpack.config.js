@@ -28,7 +28,9 @@ module.exports = env => {
             loaders: [
                 loaders.BabelLoader,
                 loaders.SASSLoader,
-                loaders.CSSLoader
+                loaders.CSSLoader,
+                loaders.JSONLoader,
+                loaders.FontLoader
             ]
         }
     };

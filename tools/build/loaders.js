@@ -11,18 +11,18 @@ const BabelLoader = {
 };
 
 const styleLoaders = [
-  'style-loader',
-  'css-loader?sourceMap',
-  'autoprefixer-loader?browsers=last 2 version',
-  'sass-loader?sourceMap&outputStyle=expanded&' +
-  'includePaths[]=' +
-  (encodeURIComponent(path.resolve(process.cwd(), './node_modules')))
+    'style-loader',
+    'css-loader?sourceMap',
+    'autoprefixer-loader?browsers=last 2 version',
+    'sass-loader?sourceMap&outputStyle=expanded&' +
+    'includePaths[]=' +
+    (encodeURIComponent(path.resolve(process.cwd(), './node_modules')))
 ];
 
 const cssLoaders = [
-  'style-loader',
-  'css-loader?sourceMap',
-  'autoprefixer-loader?browsers=last 2 version'
+    'style-loader',
+    'css-loader?sourceMap',
+    'autoprefixer-loader?browsers=last 2 version'
 ];
 
 const SASSLoader = {
@@ -33,10 +33,22 @@ const SASSLoader = {
 const CSSLoader = {
     test: /\.css$/,
     loader: cssLoaders.join('!')
+};
+
+const JSONLoader = {
+    test: /\.json$/,
+    use: 'json-loader'
+};
+
+const FontLoader = {
+    test: /\.(eot|svg|ttf|woff|woff2)$/,
+    loader: 'file?name=public/dist/fonts/"[name].[ext]"'
 }
 
 module.exports = {
     BabelLoader: BabelLoader,
     CSSLoader: CSSLoader,
-    SASSLoader: SASSLoader
-}
+    SASSLoader: SASSLoader,
+    JSONLoader: JSONLoader,
+    FontLoader: FontLoader
+};
